@@ -1,4 +1,6 @@
 Sample::Application.routes.draw do
+	get ":file_name" => "static_pages#show", constraints: {file_name: /#{Sample::Application::STATIC_PAGES.join("|")}/}
+	root "static_pages#home_page"
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
