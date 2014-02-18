@@ -26,4 +26,15 @@ Sample::Application.configure do
   # This option may cause significant delays in view rendering with a large
   # number of complex assets.
   config.assets.debug = true
+
+  # Setting mailer
+  config.action_mailer.smtp_settings = {
+     address: "smtp.gmail.com",
+     port: 25,
+     domain: "www.gmail.com",
+     user_name: "test.",
+     password: ""
+     # authentication: "plain",
+     # enable_starttls_auto: true
+   }
 end
